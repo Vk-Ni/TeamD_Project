@@ -1,16 +1,21 @@
 import React, { useState } from 'react';
 import '../styles/Eventform.css';
 
-const EventForm: React.FC = () => {
+const Form: React.FC = () => {
   const [eventType, setEventType] = useState<string | null>(null);
+  const [isFormOpen, setIsFormOpen] = useState(true);
+
 
   const handleEventTypeChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setEventType(event.target.value);
   };
 
   const handleCloseForm = () => {
-    setEventType(null);
+    setIsFormOpen(false);
   };
+  if (!isFormOpen) {
+    return null; // Return null when the form is closed
+  }
 
   return (
     <div className="form-container">
@@ -72,4 +77,4 @@ const EventForm: React.FC = () => {
   );
 };
 
-export default EventForm;
+export default Form;

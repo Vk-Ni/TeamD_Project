@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../styles/Eventform.css';
+import '../styles/Event.css';
 
 const Form: React.FC = () => {
   const [eventType, setEventType] = useState<string | null>(null);

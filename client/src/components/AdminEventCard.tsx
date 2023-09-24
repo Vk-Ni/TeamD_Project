@@ -3,6 +3,7 @@ import { Accordion, AccordionTab, AccordionTabChangeEvent } from 'primereact/acc
 import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
 import '../styles/NewEvent.css';
+export{}
 
 
 interface TableItem {
